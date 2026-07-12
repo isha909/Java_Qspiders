@@ -1,0 +1,749 @@
+Programming language:
+  - A language by which we give certain set of instructions to our machine in order to perform some tasks.
+  - Types:
+    1. Machine level or low level programming language --> easily readable and understandable by machine 
+        e.g Binary language
+
+    2. Assembly level or mid level programming language --> provides some predefined words to do some specific tasks
+        pre- defined words are known as Mnemonics e.g. ADD, SUB, MUL, DIV etc. It uses assembler to translate these words into machine readable format. e.g 8086 Architecture instruction set.
+
+    3. High level programming language --> Easily readable, executable and understandable by a programmer 
+        for machines to understand we use compiler and interpreter.
+
+----------------------------------------------------------------------------------------------------------------
+
+Java:
+  -high level object oriented programming language used to build web apps, mobile applications, enterprise software systems and test the applications.
+
+  -Java is platform independent language which means code written in java can run on any system that supports JVM (Java Virtual Machine)
+
+  -Java is known for its simple syntax because it doesnt have the concept of pointers as pointers are a bit complex so without it java is simple
+
+  -easier, portable 
+  - more secure and robust with strong memory management
+  -follows the principle of WORA (Write Once, Run Anywhere)
+
+  -Uses both compiler and interpreter.
+  -James Gosling is the father of Java.
+
+----------------------------------------------------------------------------------------------------------------
+
+  // instructions are always written inside the class
+  e.g
+  public class HelloWorld{                       //Defines a class named HelloWorld and an opening bracket for class
+    public static void main(String [] args)      //this is main method, the entry point for any java program
+    {                                            // an openning bracket for method
+      System.out.println("Hello World!");        //print statement
+    }
+  }
+
+  -to run java program in cmd or console run 2 commands
+  1. javac filename.java
+  2. java filename
+
+  - javac compiles the code into byte code and creates .class filename
+  - JVM reads .class file and interprets the bytecode
+  - A class in java can be executed only if main method is created as {--public static void main(String [] args)--} 
+  - A class file created in java without main method can only be compiled but can't be executed because java program execution starts from main method as it is not present the program will not be executed.
+
+--------------------------------------------------------------------------------------------------------------
+
+History of Java:
+  - developed by James Gosling and his team at Sun Microsystems in 1991.
+  - Java was first called Oak and later named Java inspired by coffee beans
+  - Java was released publically in 1995.
+  - JDK 1.0 --> Jan 1996
+  - JDK 1.1 --> Feb 1997
+    '
+  - JDK 1.8 (8) --> Mar 2024 (used in industry) 
+    
+  - Java SE 26 (LTS) --> Mar 2026 latest version of Java
+
+  1991- 2010 --> Sun Microsystems
+  in 2006 --> became open source
+  2010- present --> Oracle 
+
+---------------------------------------------------------------------------------------------------------------
+
+Features of Java:
+  1. Platform independent
+  2. Simple
+  3. Object oriented
+  4. Portable
+  5. High performance
+  6. Secure 
+  7. Robust 
+  8. Multithreaded etc
+
+---------------------------------------------------------------------------------------------------------------
+
+JDK:
+  - Java Development Kit is a package which consists of java development tools like javac compiler and JRE for extension
+  - Development tools + JRE
+
+JRE:
+  - Java Runtime Environment consists of JVM and built in class files which is required for execution of program
+  - JVM + System Libraries (e.g. io, net, lang, util etc)
+
+JVM:
+  - Java Virtual Machine helps to convert bytecode into current system understandable language with the help of interpreter 
+  - JIT Compiler: Just In Time compiler is an integral part of JVM, it helps improve the performance of java programs by compiling byte codes into nature machine code at runtime, enhances performance  
+
+---------------------------------------------------------------------------------------------------------------
+
+Data/ Literals:
+  -Infomation used in programming language is called data.
+  -Types:
+    1. Primitive data --> single value
+    2. Non- primitive data --> multi value
+  
+  1. Primitive data:
+      it has 3 types:
+       a. Number data --> consistes of +ve, -ve, whole, decimal numbers
+       b. Character data --> anything enclosed within a single quote (' ') and length is 1
+       c. Boolean data --> used to write logical values. 2 boolean literals.
+
+    Number data: 
+      -We can print the number data directly inside the printing statement or we can store directly inside the variable.
+      - It is of two types: 
+        1. Integer
+          |--> byte
+          |--> short 
+          |--> int 
+          |--> long 
+
+        2. Floating point number
+          |--> float 
+          |--> double
+    
+    Character data:
+      - anything enclosed within a single quote (' ') and length is 1. Java supports 65000+ characters.
+      - Every character has one uniques value known as ASCII(American Standard Code for Information Interchange) value.
+
+      Char     ASCII value
+      A         65
+      B         66
+      C         67
+      :
+      Z         90
+      :
+      a         97
+      b         98
+      :
+      z         122
+
+    Boolean Data:
+      - Used to write logical values. 2 boolean literals
+      a. true          b. false
+      - both are keywords
+      - true represents logical high (1)
+      - false represents logical low (0)
+
+  2. Non Primitive Data:
+      Multi value data is known as non primitive data
+      It has different types:
+        1. String data
+        2. NULL 
+        3. Object reference etc 
+
+    Note: byte + byte = int
+          short + short = int 
+
+--------------------------------------------------------------------------------------------------------------
+
+Variable:
+  - It is a container used to store data.
+  - Based on which type of data is stored in variable, we have 2 types of variables:
+    1. Primitive --> used to store primitive data
+    2. Non Primitive --> used to store non primitive data
+
+--------------------------------------------------------------------------------------------------------------
+
+Printing Statement:
+  - Used to print the data
+  - These are of 3 types:
+    1. print
+    2. println 
+    3. printf 
+
+  1. print:
+    - System.out.print(data)
+    - Used only to print data
+    - We can't use print statement withpout passing any data, if used then we will get compile time error
+
+  2. println:
+    - System.out.println(data)
+    - used to print data as well as create new line
+    - we can use it without passing any data, it is just used to print new lines
+
+--------------------------------------------------------------------------------------------------------------
+
+Tokens:
+  - Smallest unit of programming language used to compose the statement 
+  - tokens are of 6 types:
+    1. Keywords 
+    2. Identifiers 
+    3. Seperators 
+    4. Comments
+    5. Data/ Literals 
+    6. Operators 
+
+  Comments: It is used to specify the java code 
+    - 2 types:
+        1. Line oriented --> single line comment '//'
+        2. Block oriented --> multi line comment '/* .... */'
+
+  Keywords: Pre defined words which java compiler can understand 
+    - every keyword is associated with a specific task 
+    - a programmer can't change the meaning of a keyword 
+
+    Note: We have 53 keywords in java w.r.t. JDK 1.8
+    Rule: Keywords are always written in lower case 
+
+  Identifiers: The name given to components of java by the programmer is called as identifiers. 
+    - List of components:
+      - class
+      - method
+      - variables 
+      - interface etc 
+                                       
+    - Rules of identifiers:
+      1. Allowed characters are A-Z, a-z, 0-9, _, $
+      2. First letter shouldn't be a digit
+      3. Keyword can't be used as identifier
+      4. Character space is not allowed in between the identifier 
+      5. Only two special characters are allowed i.e. _ , $
+      6. Only start with A-Z, a-z, _, $
+
+--------------------------------------------------------------------------------------------------------------
+
+Data Types:
+  - It is used to create a variable of specific type 
+  - It is of two types:
+      1. Primitive
+      2. Non Primitive 
+
+      Primitive Data Type:
+          - Used to create a variable of primitive type 
+          - It is of 8 types such as byte, short, int, long, float, double, char, boolean
+          - These are all keywords 
+
+        keyword               size                 default value                              range
+        byte                 1 byte                     0                                   -128 to 127
+        short                2 byte                     0                                 -32768 to 32767
+        int                  4 byte                     0                              -2147483648 to 2147483647 
+        long                 8 byte                     0                                  20 digit data 
+        float                4 byte                     0.0                           After decimal 4 - 6 digits
+        double               8 byte                     0.0                             more than float range
+        char                 2 byte                 empty character \u0000 unicode value       0 to 65000+
+        boolean              1 bit                      false                                  true/false
+
+  - Steps to work with variables:
+      1. Declare the variable --> create //Syntax: datatype variableName;
+      2. Initialize the variable --> store //Syntax: variableName = value;
+      3. Access the variable --> use //printing the statement 
+
+    Note: While initializing long add L or l in the end of the value e.g long a = 23456789345678l;
+    Note: While initializing float add F or f in the end of the value e.g float a = 234.893f;
+
+---------------------------------------------------------------------------------------------------------------
+
+Type Casting: 
+  - The process of converting one type of data into another type of data 
+  - Type casting is of two types:
+  1. Primitive type casting: The process of converting primitive data into another primitive data
+      - Widening / Implicit Primitive Type Casting
+      - Narrowing / Explicit Primitive Type Casting
+      
+      - Boolean is not going to take part in type casting
+
+  2. Non Primitive type casting: converting non primitive data into another non primitive data
+       
+      byte < short < int < long < float < double
+             char
+        long < float --> because of memory mechanism not because of size
+
+  # Widening:
+    - The process of converting smaller range data into larger range data of primitive type is known as widening.
+    - In widening process there is no data loss
+    - Since, there is no data loss compiler can do implicitly.
+
+    Note: It is also possible to do explicitly but not required
+
+    e.g. Type Casting folder
+      - byte to short 
+      - byte to int 
+      - byte to long
+      - byte to float
+      - byte to double
+      - short to int
+      - short to long
+      - short to float
+      - short to double
+      - int to long
+      - int to float
+      - int to double
+      - long to float
+      - long to double
+      - float to double
+      - char to int
+      - char to long 
+      - char to float 
+      - char to double 
+
+  # Narrowing:
+    - The process of converting larger range of primitive data into smaller range of primitive data is known as Narrowing
+    - In this process there is a possibility of data loss
+    - Since there is a possibility of data loss, compiler doesn't do narrowing implicitly
+    - it can be done explicitly by the programmer with the help of type cast operator.
+
+    Type cast operator:-
+      - It is unary operator (only one operand)
+      - Type cast operator is used to explicitly convert one datatype into another data type.
+
+    e.g.
+      - double to float 
+      - double to long
+      - double to int
+      - double to short
+      - double to byte
+      - float to long
+      - float to int 
+      - float to short
+      - float to byte
+      - long to int
+      - long to short
+      - long to byte
+      - int to short 
+      - int to byte 
+      - double to char
+      - float to char 
+      - long to char
+      - int to char
+      - short to char
+      - char to short
+      - byte to char
+      - char to byte 
+
+    //long to int
+    long a = 45;
+    int b = (int) a; //narrowing
+
+------------------------------------------------------------------------------------------------------------------
+
+Scope of Variable:
+  - The visibility of a variable is known as the scope of a variable 
+  - Based on the scope of variable we can categorize variable into three types:
+    1. Local variable
+    2. Static variable --> static keyword is used
+    3. non- Static variable
+
+    Local Variable:
+      - The variable declared inside a method block or any other block except the class block is known as a local variable
+      - Characteristics:
+        - we can't use local variable without initialization, if we try to use a local variable without initialization then we will get compile- time error.
+        - Local variables will not be initialized with default values.
+        - The scope of the local variable is nested inside the block wherever it is declared, hence it can't be used outside the block. 
+
+------------------------------------------------------------------------------------------------------------------
+
+Operators:
+  - These are predefined symbol which is used to perform some specific task on the given data.
+  - Operand: the data given as a input to the operator is known as operand.
+  - Based on the number of operand given to the operator, operators are classified into three categories:
+    1. Unary operator --> only one operand.
+        - e.g. new() operator, typecasting operator, increment operator, decrement operator, logical not (!) operator
+
+    2. Binary operator --> two operands
+        - e.g. +, -, *, /, %, >, <, >=, <=,  +=, -=, ==, *=, logical OR (||), logical AND (&&)
+        - It includes 
+            Arithematic operators -->
+              -> + --> used for addition along with the string concatenation operation
+              -> - --> Subtraction
+              -> * --> Multiplication
+              -> / --> Division is used to get quotient
+              -> % --> Modulus is used to get reminder
+
+            [Extract: we use Modulus
+            Remove: we use Division]
+
+            Assignment operators -->
+              - Mainly of two types:
+                1. Simple --> 
+                2. Compound --> Internally type casting is working and this is used for code optimization and better performance. e.g. +=, -=, *=, /=, %=
+              
+            Logical operators -->
+              - It is used to combine the conditions 
+
+            Relational/ Comparison operator -->
+              - It is used to create a condition 
+              - It returns boolean value
+              - ==, !=, >, <, >=, <=
+              - e.g. A person is eligible to vote -->  a >= 18
+
+    3. Ternary operator --> three operands
+        - e.g. conditional operators (_?_:_)
+
+      Conditional operators: 
+        - It is a ternary operator.
+
+        - Syntax to create conditional operator:
+          Operand 1 ? Operand 2 : Operand 3
+          condition ? Statement 1 : Statement 2
+            condition --> Relational operators or logical operators here
+
+        - Operation:
+          1. The return type of operand 1 must be boolean
+          2. If the condition is true, Statement 1 will get executed else Statement 2 will get executed. 
+
+      The return type of the conditional operator depends on the operand 2 and operand 3. 
+
+      Ques 1: Check the number is positive or not positive
+      Ques 2: Check the number is negative or not negative
+      Ques 3: Check the number is zero or non zeroX
+      Ques 4: Check the number is larger than 50 or not
+      Ques 5: Check the price is more than 125.75 or not
+      Ques 6: Check the number is in between 500 to 1000 or not excluding the given number
+      Ques 7: Check the number is a two digit number or not
+      Ques 8: Check the number is divisible by 5 or not 
+      Ques 9: Check the number is divisible by 7 or not 
+      Ques 10: Check the number is even or not
+      Ques 11: Check the number is odd or not 
+      Ques 12: Check the number is divisible by 6 or not without directly dividing or modulusing by 6
+      Ques 13: Check the number is even or not without using modulus operator //num/2*2 = num 
+      Ques 14: Check if the given character is 'A', 'a' or not 
+      Ques 15: Check if the given character is 'Q', 'q' or not 
+      Ques 16: Check if the given character is uppercase character or not 
+      Ques 17: Check if the given character is lowercase character or not //ch >='a' ||ch<='z'
+      Ques 18: Check if the given character is alphabet or not 
+      Ques 19: Check if the given character is digit character or not
+      Ques 20: Check if the given character is uppercase vowel or not
+      Ques 21: Check if the given character is lowercase vowel or not
+      Ques 22: Check if the given character is vowel or not
+      Ques 23: Check if the given character is uppercase consonent or not
+      Ques 24: Check if the given character is lowercase consonent or not
+      Ques 25: Check if the person is eligible to vote or not
+      Ques 26: Find out largest among 3 numbers without using and operator and with using and operator
+      Ques 27: Find out smallest among 3 numbers without using and operator and with using and operator
+
+      Increment/ Decrement operator:
+        - It is used to update the value by 1
+        - This operator is used with the variable
+        - Increment operator increase the value by 1
+        - Decrement operator decrease the value by 1
+        - It is used for code optimization and internally type casting is also applied
+        - It can be pre increment or pre decrement or post increment or post decrement
+        - e.g ++x (pre increment), x++(post increment), --x(pre decrement), x--(post decrement)
+
+Perfect Number: The sum of factors of the number excluding the number itself is equal to the number then the number is perfect. 
+
+------------------------------------------------------------------------------------------------------------------
+
+Control Statements:
+  - It is used to control the flow of the execution of the program.
+  - It is of two types:
+    1. Decision making Statements
+    2. Looping Statements
+
+  Decision making Statements:
+    - The Decision making Statements helps the programmer to skip the block of instructions from the execution if the condition is not satisfied.
+    - It is of 4 types:
+      1. if
+      2. if-else
+      3. if-else-if ladder
+      4. switch 
+
+  Looping Statements:
+    - Looping statement helps the programmer to execute the set of instructions repeatedly
+    - In java, we have different types of loop statements, they are:
+      1. while loop --> entry control loop
+      2. do-while loop --> exit control loop
+      3. for loop
+      4. for each/ advanced for / enhanced for loop
+
+    1. while loop:
+      Syntax to create while loop
+        while(condition){
+          statement to be repeated;
+        }
+
+      Workflow:
+        Case1: When the condition is true
+          - The loop continues
+          - Control execute the statement which belongs to the loop
+          - After execution once the loop block ends, control goes back to the condition and the entire process will be repeated till the condition becomes false. 
+
+        Case2: When the condition is false
+          - The loop is stopped i.e. repetition is stopped
+          - The loop block will not get executed
+          - The control comes outside the loop to the next statement
+
+    2. do while loop:
+      Syntax to create do-while loop:
+        do
+        {
+          //statement
+        }
+        while(condition);
+
+      Workflow:
+        Case1: When the condition is true
+          - Control goes to the loop block directly, execute the instructions.
+          - Then control goes to the condition, if the condition is true the control goes back to the do block.
+
+        Case2: When condition is false
+          - Control goes to the loop block directly, execute the instructions.
+          - Then control goes to the condition, if the condition is false the loop stops and control goes to the next statement. 
+
+    Difference between while loop and do while loop:
+    while:
+      - First the condition is checked, if the condition is true then the loop block gets executed.
+      - The minimum iteration can be zero.
+      - Directly we can't pass false in the while loop if we do so we will get a compile time error.
+      - This is entry control loop.
+      - e.g.
+      int a= 5, b=10, count=0;
+      while(a>b)
+      {
+        count++;
+        sout("value of b is " +b);
+      }
+      sout("Iteration" +count);
+
+      Output: Iteration 0
+
+    do-while:
+      - In do-while, first the loop block gets executed and then the condition is checked.
+      - the minimum iteration is one.
+      - We can pass false in the do while loop.
+      - this is exit control loop.
+      - e.g. 
+      int a= 5, b=10, count=0;
+      do 
+      {
+        count++;
+        sout("value of b is " +b);
+      }
+      while(a>b);
+      sout("Iteration" +count);
+
+      Output: value of b is 10
+              Iteration 1
+
+    3. for loop:
+      Syntax to create for loop:
+      for(initialization ; condition ; update)
+      {
+        //statement to be repeated
+      }
+
+        Workflow:
+          1. Control go to the initialization part.
+          2. Then it will go to the condition part.
+          3. If the condition is true then it will enter inside the loop block.
+          4. Once the execution of instruction inside the loop block is completed control will go to the update segment.
+          5. Then it will go back to the condition. Step 2,3,4 will continue until the condition become false.
+
+      Note: 
+        - All the three segments are optional (initialization , condition , update).
+        - If the condition is not provided, by default it is considered as true.
+
+    Nested loop:
+      - Writing a loop statement inside another loop statement is known as a nested loop statement
+      - In a nested loop, the inner loop is executed completely for each and every iteration of the outer loop.
+
+        Outer loop --> row
+        inner loop --> column
+
+-----------------------------------------------------------------------------------------------------------------
+  Decision making Statements:
+    1. if statement:
+      Syntax to create if statement:
+        if(condition)
+        {
+
+        }
+
+      Workflow:
+        If the condition is satisfied then the instruction written inside the if block gets executed or normal flow of the execution continues (Instructions written inside the if block is skipped if condition is not satisfied).
+      
+      e.g. Write a java program to check is the number even.
+
+      
+    2. if-else statement:
+
+    3. if - else if statement:
+      Syntax to create if-else if statement
+      if(condition){
+      }
+      else if(condition){
+      }
+      else if(condition){
+      }
+      else if(condition){
+      }
+      else{
+      }
+
+      In this syntax else is optional 
+
+      Execution Workflow:
+        If the condition is satisfied then the instruction written inside if block gets executed if not satisfied, the condition is checked in the else if block from top to bottem order and if the condition is satified in any of the else if block then, only that else if block gets executed if not satified else block gets executed remaining blocks are skipped.
+
+      Ques 1: Print the month name based on the month number 
+      Ques 2: Print the day name based on the day number 
+      Ques 3: Print the number of days available in the month based on the month number
+      Ques 4: Check given character is upper case character or lower case character or digit character or special character
+      Ques 5: Find out largest of two numbers
+      Ques 6: If character is uppercase convert it into lowercase, if it is in lowercase convert it into uppercase.
+      Ques 7: Check the digit character is even or odd.
+      Ques 8: 1 ques with nested loop
+
+    4. switch statement:
+      - used to execute block of code from multiple cases based on the value of an expression.
+        - Syntax:
+        switch(val / var / expression)
+        {
+          case value / constant expression:
+          {
+
+          }
+          [break;]
+          case value / constant expression:
+          {
+
+          [break;]
+          }
+          .
+          .
+          .
+          .
+          [default:
+          {
+
+          }]
+        }
+
+      Why we use Switch?
+      - High performance
+      - Grouping
+
+  Ques 1: Write a java program to print the month name based on the month number
+  Ques 2: Write a java program to print number of days availabe in the month based on the month number 
+  Ques 3: Write a java program to check if the given character is vowel or consonent 
+
+------------------------------------------------------------------------------------------------------------------
+
+Method:
+  - It is a block of statement which is going to get execute if you are going to call it.
+
+  - Characteristics / Rules to work with method 
+    - Method should be defined inside the class
+    - We can define more than one method inside the class 
+    - We can't define a method inside a method
+    - But we call a method from another method 
+  
+  - Syntax of defining the method:
+    [access modifier] [modifier] return type methodName ( [formal argument])  //method declaration
+    {                                          //method signature
+      //instructions
+    }  //method definition is whole structure
+
+    In this above syntax access modifier, modifier and formal argument are optional 
+
+  - Method call statement: It is used to call a method 
+      Syntax:
+        Method Name ([actual argument]);
+      - In this syntax actual argument is optional 
+      - The syntax will be varied based on the method structure
+
+  1. Method signature:
+    - Method name
+    - Method argument
+
+  2. Method declaration:
+    - Access modifier
+    - modifier
+    - return type
+    - method signature
+
+  3. Method definition:
+    - method declaration
+    - method body / implementation / block 
+
+  - Types of Methods: There are many more types of methods 
+      Based on the number of arguments, methods are classsified into 2 types:
+        1. No-argument method --> A method which does not have formal argument is known as no - argument method
+            e.g. public static void demo()
+                  {
+                    System.out.println("demo() no argument method");
+                  }
+
+        2. Parameterized method --> The method which has formal argument is known as parameterized method. These are used to accept the data 
+            e.g. public static void demo(int a)
+                  {
+                    System.out.println("demo(int a) parameterized method");
+                  }
+
+          Rules to call parameterized method:
+            1. The number of actual argument should be same as the number of formal argument
+
+            2. The type of corresponding actual argument should be same as the type of formal argument, if not compiler tries to convert implicit conversion if it is not possible then we will get compile time error.
+
+            3. The sequence of actual argument should be same as the sequence of formal argument.
+
+    Formal Argument: A variable which is declared in a method declaration is known as formal argument.
+    Actual Argument: The values passed in the method call statement is known as actual argument.
+
+    Method call statement flow:
+      - Execution of calling method is paused
+      - Control is transferred to the called method
+      - Execution of called method begins
+      - Once the execution of the called method is completed the control is transferred back to the calling method 
+      - Execution of calling method resumes.
+
+    Calling Method:
+      The method which is trying to call another method is known as the calling method (caller).
+
+    Called Method:
+      The method which is being called by the caller is known as a called method.
+  
+  Modifier: 
+    - It is used to change the characteristics of java components.
+    - e.g. strictfp, final, static, abstract, public, private, protected, transient, volatile ...etc
+  
+  Access Modifier: 
+    - It is used to change the accessibility of java components.
+    - We are having 4 types of access modifier as follows:
+      1. private
+      2. default
+      3. protected
+      4. public
+
+      1. private: 
+        - It is a class level modifier, it is responsible for variables, methods and constructors.
+        - If the member of a class is prefixed with a private modifier then it is accessible only within the class; accessing outside the class is not possible.
+
+      2. default:
+        - The accessibility of default modifiers is only within the package. It can't be accessed from outside the package.
+        - If you don't declare any access modifiers then it is considered as a default access modifier.
+
+      3. protected:
+        - The access level of a protected modifier is within the package and outside the package through child class.
+        - If you don't make the choild class, it cannot be accessed from outside the package.
+
+      4. public:
+        - The access level of the public modifier is everywhere.
+        - It can be accessed from within the class, outside the class, within the package as well as outside the package. 
+
+    Scope of an access modifiers:
+    -------------------------------------------------------------------------------------------------------
+    | Access modifier | Within class |  Within package |  Outside package | Outside package by child class|
+    | private         | yes          | no              | no               | no                            |
+    | default         | yes          | yes             | no               | no                            |
+    | protected       | yes          | yes             | no               | yes                           |
+    | public          | yes          | yes             | yes              | yes                           |
+    -------------------------------------------------------------------------------------------------------
+
+      The scope of access modifier based on the accessibility is:
+      private < default < protected < public 
