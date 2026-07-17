@@ -1,3 +1,5 @@
-public class AC4 {
-  
+abstract class AC4 {
+  public static void main(String[] args) {
+    System.out.println("byee");
+  }
 }
