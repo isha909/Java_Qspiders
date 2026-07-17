@@ -711,6 +711,40 @@ Method:
   Modifier: 
     - It is used to change the characteristics of java components.
     - e.g. strictfp, final, static, abstract, public, private, protected, transient, volatile ...etc
+
+    # final modifier:
+      - It is a keyword and a modifier 
+      - It cn be used with variable, class, method
+      - If we are using the final with variable, variable can be reaccessed but it can't be reinitialized.
+      e.g1. without final keyword
+      class A{
+        public static void main(string[]args)
+        {
+          int x = 10;
+          sopln(x);  //10
+          x = 20;
+          sopln(x);  //20
+        }
+      }
+
+      e.g2. with final kewyword and without reinitialization but reaccess
+      class A{
+        public static void main (string[]args)
+        {
+          final int x = 10;
+          sopln(x);  //10
+          sopln(x);  //10
+        }
+      }
+
+      e.g3. with final keyword and reinitialization
+      class A{
+        public static void main (string[]args)
+        {
+          final int x = 10;
+          x= 20; //cte
+        }
+      }
   
   Access Modifier: 
     - It is used to change the accessibility of java components.
@@ -747,3 +781,6 @@ Method:
 
       The scope of access modifier based on the accessibility is:
       private < default < protected < public 
+
+------------------------------------------------------------------------------------------------------------
+
